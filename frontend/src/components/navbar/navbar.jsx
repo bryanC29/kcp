@@ -12,7 +12,7 @@ const Navbar = () => {
   const getClass = ({ isActive }) =>
     `block py-2 px-3 rounded md:border-0 md:p-0 md:px-3 md:py-2 ${
       isActive
-        ? 'bg-black md:bg-transparent md:bg-black text-white'
+        ? 'bg-black md:bg-black text-white'
         : 'md:hover:outline-gray-600 md:hover:outline md:hover:outline-2 md:hover:text-black hover:bg-gray-700 hover:text-white md:hover:bg-transparent text-black'
     }`;
 
