@@ -53,11 +53,11 @@ const Index = () => {
         </Helmet>
 
         <div className='flex flex-col-reverse lg:flex-row items-center justify-center h-[90vh] mx-6'>
-            <div className='lg:w-2/5 w-full lg:me-12'>
-                <p className='lg:text-9xl text-7xl lg:text-end text-center font-bold'>Kris Computer Point</p>
-                <p className='lg:text-end text-center text-3xl italic'>We Make Professional</p>
+            <div className='lg:w-max w-full lg:me-12'>
+                <p className='lg:text-9xl text-7xl lg:text-end text-center font-bold max-w-max'>Kris Computer Point</p>
+                <p className='lg:text-end text-center md:text-4xl text-xl italic'>We Make Professional</p>
             </div>
-            <div className='lg:border-l-2 lg:border-black lg:p-12 mb-8 lg:mb-0'>
+            <div className='lg:border-l-2 lg:border-black lg:p-14 mb-8 lg:mb-0 lg:w-2/3'>
                 <img src={kcp_logo} alt="KCP Logo" className='lg:h-96 h-60' />
             </div>
         </div>
@@ -87,12 +87,12 @@ const Index = () => {
             ))}
         </div>
         <div className='text-center pb-6'>
-            <Link to='/courses' className='bg-black hover:bg-white text-white hover:text-black rounded-xl w-[80%] inline-block p-3 text-xl border-2 border-black'>
+            <Link to='/courses' className='bg-black hover:bg-white text-white transition-all hover:scale-105 hover:text-black rounded-xl w-[80%] inline-block p-3 text-xl border-2 border-black'>
                 Explore all courses &nbsp; <EastIcon />
             </Link>
         </div>
 
-        <p className='text-center text-2xl underline underline-offset-4 my-5 mb-9 font-semibold'>
+        <p className='text-center p-3 md:p-0 md:text-2xl md:underline md:underline-offset-4 my-5 mb-9 md:font-semibold'>
             Students getting placed in reputed organizations
         </p>
         <div className="bg-slate-200 flex-col flex justify-around p-4 items-center flex-wrap md:flex-row">
@@ -102,8 +102,8 @@ const Index = () => {
             <img src={samsung_logo} alt="" className='w-40 m-1 saturate-0 hover:saturate-100' />
         </div>
 
-        <p className='p-4 text-center font-semibold underline underline-offset-2 text-3xl my-8'>
-            Book <span className='uppercase bg-yellow-300'>free</span> Consultation
+        <p className='p-4 text-center text-3xl my-8'>
+            Book <span className='uppercase bg-yellow-300 italic font-bold'>free</span> Consultation
         </p>
         <div className='flex flex-row justify-around overflow-auto lg:overflow-hidden p-2 sm:p-8 lg:p-0 lg:pe-4 items-center mb-16 border-2 border-slate-300 sm:w-[80%] w-[90%] mx-auto rounded-2xl shadow-lg'>
             <div className='hidden lg:block w-1/2'>

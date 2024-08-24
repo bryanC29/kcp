@@ -12,7 +12,7 @@ const Footer = () => {
 
                         <div className="mb-6 md:mb-0 md:me-7">
                             <span className="flex flex-col items-center">
-                                <img src={logo} className="h-16 me-3" alt="FlowBite Logo" />
+                                <img src={logo} className="h-16 me-3" alt="KCP Logo" />
                                 <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
                                     Kris Computer Point
                                 </span>
@@ -97,7 +97,7 @@ const Footer = () => {
 
                     <div className="text-center md:text-start">
                         <span className="text-sm text-gray-600 sm:text-center">
-                            &copy; 2024 <a href="https://flowbite.com/" className="hover:underline italic">Kris Computer Point</a> | All Rights Reserved.
+                            &copy; 2024 <a href="/" className="hover:underline italic">Kris Computer Point</a> | All Rights Reserved.
                         </span>
                     </div>
                 </div>
