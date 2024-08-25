@@ -1,5 +1,7 @@
 {
+    "basic": "Basics",
     "graphic": "Graphic and Designing",
     "account": "Accounting",
-    "basic": "Basics"
+    "programming": "Programming Languages",
+    "others": "Additional Courses"
 }

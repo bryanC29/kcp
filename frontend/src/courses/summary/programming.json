@@ -1,0 +1,68 @@
+[
+    {
+        "image": "https://t4.ftcdn.net/jpg/02/31/67/27/360_F_231672799_eKT4LVsU3H4tB1ijPuGi2BwEqMVdHN2l.jpg",
+        "heading": "HTML/CSS - Web Development",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
+        "instructor": "Sanjay Christy",
+        "software": "Notepad, Browser",
+        "price": 899,
+        "prevPrice": 1200,
+        "readMore": "/",
+        "register": "/courses"
+    },
+    {
+        "image": "https://wallpapers.com/images/hd/java-script-coding-concept-illustration-n7mlh1p3z61gst83.jpg",
+        "heading": "JS - JavaScript",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
+        "instructor": "Sanjay Christy",
+        "software": "Notepad, Browser",
+        "price": 899,
+        "prevPrice": 1200,
+        "readMore": "/",
+        "register": "/courses"
+    },
+    {
+        "image": "https://miro.medium.com/v2/resize:fit:1358/1*as6Mghi7WSoHmDZZ89ErjA.jpeg",
+        "heading": "C/C++ Language",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
+        "instructor": "Sanjay Christy",
+        "software": "Turbo C",
+        "price": 899,
+        "prevPrice": 1200,
+        "readMore": "/",
+        "register": "/courses"
+    },
+    {
+        "image": "https://w.wallha.com/ws/14/WUGAX8Cs.png",
+        "heading": "JAVA Programming",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
+        "instructor": "Sanjay Christy",
+        "software": "BlueJ",
+        "price": 899,
+        "prevPrice": 1200,
+        "readMore": "/",
+        "register": "/courses"
+    },
+    {
+        "image": "https://w0.peakpx.com/wallpaper/659/699/HD-wallpaper-python-amoled-coding-coding-dark-dark-programming-python-sky-universe.jpg",
+        "heading": "Python Programming",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
+        "instructor": "Sanjay Christy",
+        "software": "Python IDLE",
+        "price": 899,
+        "prevPrice": 1200,
+        "readMore": "/",
+        "register": "/courses"
+    },
+    {
+        "image": "https://wallpapercave.com/wp/wp1828935.jpg",
+        "heading": "SQL Language - Database Management DBMS",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
+        "instructor": "Sanjay Christy",
+        "software": "MySQL Workbench",
+        "price": 899,
+        "prevPrice": 1200,
+        "readMore": "/",
+        "register": "/courses"
+    }
+]
