@@ -6,6 +6,7 @@ import Index from './pages/index/index';
 import Login from './pages/login/login';
 import Courses from './pages/courses/courses';
 import Register from './pages/signup/register';
+import Course from './pages/detailedCourse/detailedCourse';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/courses' element={<Courses />} />
           <Route path='/registration' element={<Register />} />
+          <Route path='/details/:courseName' element={<Course />} />
         </Routes>
         <Footer />
       </Router>
