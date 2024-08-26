@@ -11,14 +11,14 @@
         "register": "/courses"
     },
     {
-        "image": "https://aelaschool.com/wp-content/uploads/2023/12/artigo-photoshop-2024-8-novidades-que-voce-precisa-conhecer_85955e7010130b2bd656d3c154d24380_2000-995x520.png",
+        "image": "https://img-c.udemycdn.com/course/750x422/5346430_f677.jpg",
         "heading": "Photo editing - Photoshop",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam exercitationem obcaecati ipsum expedita, sit minima hic vitae ad quod labore quam. Nesciunt consectetur, ducimus, cumque quisquam nihil temporibus harum quidem voluptas deserunt at rerum officiis dolor rem, sed deleniti fugit quam laboriosam illo cum doloribus animi in error architecto. Quod!",
         "instructor": "Sanjay Christy",
         "software": "Adobe Photoshop",
         "price": 899,
         "prevPrice": 1200,
-        "readMore": "/",
+        "readMore": "./photoshop",
         "register": "/courses"
     }
 ]
