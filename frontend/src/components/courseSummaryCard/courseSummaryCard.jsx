@@ -24,7 +24,7 @@ const CourseSummaryCard = ({ data }) => {
                                 <p><span className='italic text-slate-500'>Software used </span> - {item.software}</p>
                             </div>
 
-                            <div className='flex flex-row justify-between px-4 items-baseline'>
+                            <div className='flex flex-col lg:flex-row justify-between px-4 items-baseline'>
                                 <div className='flex flex-row items-baseline'>
                                     <p className='line-through text-sm text-slate-600'>&#8377; {item.prevPrice}</p>
                                     <p className='text-lg'>&nbsp;&#8377; {item.price}&nbsp;</p>
@@ -33,7 +33,7 @@ const CourseSummaryCard = ({ data }) => {
 
                                 <Link to={item.readMore} className='underline underline-offset-2'>Read more</Link>
 
-                                <Link to={item.register} className='border border-black bg-black hover:bg-transparent text-white hover:text-black rounded-lg p-1 px-3'>
+                                <Link to={item.register} className='m-2 lg:m-0 my-4 lg:my-0 w-full lg:w-max text-center lg:text-start border border-black bg-black hover:bg-transparent text-white hover:text-black rounded-lg p-1 px-3'>
                                     Register Now <EastIcon />
                                 </Link>
                             </div>
