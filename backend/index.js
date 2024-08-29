@@ -1,21 +1,31 @@
-const express = require('express');;
+import express, { urlencoded } from 'express';
+import cors from 'cors';
+
 const app = express();
-const dotenv = require('dotenv');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
 
-dotenv.config();
+app.use(cors({
+    'origin': '*',
+    'methods': 'GET,POST,',
+}))
 
-app.use(cors())
-app.use(express.json({ limit: '5mb' }))
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json({
+    limit: '5mb',
+}))
+
+app.use(express.urlencoded({
+    extended: true,
+}))
 
 app.get('/', (req, res) => {
-    res.status(200).json({ "message": "Hello World!" });
+    res.status(200).json({'message': 'Working Backend'});
 })
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`)
+app.post('/', (req, res) => {
+    res.status(200).json({'message': 'Post request received'});
 })
+
+import userRoute from './routes/users.js';
+
+app.use('/users', userRoute);
+
+export default app;
