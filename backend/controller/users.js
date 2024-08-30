@@ -32,7 +32,7 @@ export const login = async (req, res) => {
     }
 
     catch(err) {
-        console.error(err);
+        console.log(err);
         res.status(500).json({ message: 'Internal Server error while logging in' });
     }
 }
@@ -61,7 +61,6 @@ export const signup = async (req, res) => {
             role: (role ? role: 'student'),
             uid,
         });
-        console.log(newStudent);
         await newStudent.save();
 
         const token = jwt.sign({
@@ -70,7 +69,6 @@ export const signup = async (req, res) => {
         }, process.env.JWT_SECRET, {
             expiresIn: '1d',
         });
-        console.log(token);
 
         res.setHeader('Authorization', `Bearer ${token}`);
         res.cookie('token', token, {
@@ -84,5 +82,17 @@ export const signup = async (req, res) => {
     catch(err) {
         console.log(err);
         res.status(500).json({ message: 'Internal Server error during Signup' });
+    }
+}
+
+export const logout = (req, res) => {
+    try{
+        res.clearCookie('token');
+        res.status(200).json({ message: 'Logout successfull' });
+    }
+
+    catch(err) {
+        console.log(err);
+        res.status(500).json({ message: 'Internal Server error during logout' });
     }
 }
