@@ -1,4 +1,4 @@
-import Users from "../models/students.js";
+import Users from "../models/users.js";
 import { uidGen } from "../utils/idGen.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -46,25 +46,25 @@ export const signup = async (req, res) => {
 
     try{
 
-        const existingStudent = await Users.findOne({ username: email });
-        if(existingStudent)
+        const existingUser = await Users.findOne({ username: email });
+        if(existingUser)
             return res.status(400).json({ message: 'Failed to register. Please try again later' });
 
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(password, salt);
         const uid = await uidGen(name, role);
 
-        const newStudent = new Users({ 
+        const newUser = new Users({ 
             name,
             username: email,
             password: hash,
             role: (role ? role: 'student'),
             uid,
         });
-        await newStudent.save();
+        await newUser.save();
 
         const token = jwt.sign({
-            'id': newStudent._id,
+            'id': newUser._id,
             'role': role,
         }, process.env.JWT_SECRET, {
             expiresIn: '1d',
@@ -76,7 +76,7 @@ export const signup = async (req, res) => {
             maxAge: 24 * 60 * 60 * 1000,
         });
 
-        res.status(201).json({ message: `Successfully registered as ${newStudent.role}` });
+        res.status(201).json({ message: `Successfully registered as ${newUser.role}` });
     }
 
     catch(err) {
