@@ -1,28 +1,42 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose, { Schema, model } from 'mongoose';
 
-const Student = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    username: {
+const Students = new Schema({
+    uid: {
         type: String,
         required: true,
         unique: true
     },
-    uid: {
-        type: String,
-        required: true,
+    time: {
+        type: Number,
     },
-    password: {
-        type: String,
-        required: true
+    nextDue: {
+        type: Date,
     },
-    role: {
-        type: String,
-        enum: ['student', 'teacher', 'admin'],
-        default: 'student',
-    }
-})
+    courseEnrolled: [
+        {
+            startDate: {
+                type: Date,
+            },
+            course: {
+                type: Schema.Types.ObjectId,
+                ref: 'Courses',
+            },
+        }
+    ],
+    notes: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Courses',
+        }
+    ],
+    feePaid: {
+        value: {
+            type: Boolean,
+        },
+        message: {
+            type: String,
+        },
+    },
+}, {timestamps: true})
 
-export default mongoose.model('User', Student)
+export default model('Students', Students)
