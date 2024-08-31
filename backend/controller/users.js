@@ -1,4 +1,5 @@
 import Users from "../models/users.js";
+import Requests from "../models/requests.js";
 import { uidGen } from "../utils/idGen.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -62,6 +63,13 @@ export const signup = async (req, res) => {
             uid,
         });
         await newUser.save();
+
+        if(role === 'teacher') {
+            const newTeacher = new Requests({
+                uid: newUser.uid,
+            })
+            await newTeacher.save();
+        }
 
         const token = jwt.sign({
             'id': newUser._id,
