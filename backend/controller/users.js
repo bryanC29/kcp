@@ -104,3 +104,63 @@ export const logout = (req, res) => {
         res.status(500).json({ message: 'Internal Server error during logout' });
     }
 }
+
+export const updatePassword = async (req, res) => {
+    const { password, newPassword, uid, hashedPassword } = req.body;
+
+    if(!password || !newPassword || !uid)
+        return res.status(400).json({ message: 'Enter full Credentials!' });
+
+    try {
+        const user = await Users.findOne({ uid });
+
+        if(!(user && ((hashedPassword == user.password) || (await bcrypt.compare(password, user.password)))))
+            return res.status(401).json({ message: 'Invalid request' });
+
+        const newSalt = await bcrypt.genSalt(10);
+        const newHashedPassword = await bcrypt.hash(newPassword, newSalt);
+
+        user.password = newHashedPassword;
+        await user.save();
+        return res.status(200).json({ message: 'Password updated successfully' });
+    }
+    catch(err) {
+        console.log(err);
+        return res.status(500).json({ message: 'Internal Server Error!' });
+    }
+}
+
+export const passwordResetRequest = async (req, res) => {
+    const { uid } = req.body;
+    if(!uid)
+        return res.status(400).json({ message: 'Inavlid request' });
+    
+    try {
+        const user = await Users.findOne({ uid });
+
+        if(!user)
+            return res.status(400).json({ message: 'Invalid credentials' });
+
+        const token = jwt.sign({
+            'id': user._id,
+            'hashedPassword': user.password,
+        }, process.env.JWT_SECRET, {
+            expiresIn: '1h',
+        });
+        console.log(token);
+        
+        return res.status(200).json({ message: 'Reset Password link sent to registered mail' });
+    }
+    catch(err) {
+        console.log(err);
+        return res.status(500).json({ message: 'Internal Server error' });
+    }
+}
+
+export const passwordReset = (req, res) => {
+    const token = req.params.token;
+
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+
+    res.status(200).json({ message: 'Token Verification successfull', hashedPassword: decodedToken.hashedPassword });
+}

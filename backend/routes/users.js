@@ -15,6 +15,6 @@ router.route('/signup').post(signup);
 router.route('/logout').get(logout);
 router.route('/passwordupdate').post(updatePassword);
 router.route('/resetpassword/request').post(passwordResetRequest);
-router.route('/resetpassword/:token').get(passwordReset);
+router.route('/resetpassword/token/:token').get(passwordReset);
 
 export default router;
