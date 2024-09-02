@@ -160,7 +160,14 @@ export const passwordResetRequest = async (req, res) => {
 export const passwordReset = (req, res) => {
     const token = req.params.token;
 
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    try {
+        const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+        return res.status(200).json({ message: 'Token Verification successfull', hashedPassword: decodedToken.hashedPassword });
+    }
+    catch(err) {
+        console.log(err);
+        return res.status(404).json({ message: 'Token invalid or expired' });
+    }
 
-    res.status(200).json({ message: 'Token Verification successfull', hashedPassword: decodedToken.hashedPassword });
+
 }
