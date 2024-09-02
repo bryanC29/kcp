@@ -7,3 +7,12 @@ export const uidGen = async (name, role = 'student') => {
     const id = nameTag + year + (month < 10 ? '0' + month : month) + random + roleCode;
     return id.toUpperCase();
 }
+
+export const certIDGen = async () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < 6; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
